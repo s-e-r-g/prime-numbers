@@ -30,7 +30,7 @@ void generate(Number latestFound, Number maxCount)
     
     if (maxCount == 0) return;
     
-    Number current = (latestFound % 2) ? (latestFound + 1) : (latestFound + 1);
+    Number current = (latestFound % 2) ? (latestFound + 2) : (latestFound + 1);
 
     while (maxCount)
     {

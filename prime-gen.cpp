@@ -5,12 +5,32 @@ using namespace std;
 
 typedef uint64_t Number;
 
-vector<Number> primes;
+vector<Number> primes; //primes without 1 and 2
 
 
 void generate(Number latestFound, Number maxCount)
 {
-    Number current = latestFound + 2;
+    if (maxCount == 0) return;
+    
+    if (latestFound == 0)
+    {
+        cout << 1 << endl;
+        latestFound = 1;
+        maxCount--;
+    }
+    
+    if (maxCount == 0) return;
+    
+    if (latestFound == 1)
+    {
+        cout << 2 << endl;
+        latestFound = 2;
+        maxCount--;
+    }
+    
+    if (maxCount == 0) return;
+    
+    Number current = (latestFound % 2) ? (latestFound + 1) : (latestFound + 1);
 
     while (maxCount)
     {
@@ -51,9 +71,7 @@ int main()
 {
     primes.reserve(10000000L); //10M
 
-    primes.push_back(3);
-
-    generate(3, 1000000L); //1M
+    generate(0, 1000000L); //1M
 }
 
 

@@ -6,4 +6,4 @@ Dummy Experiments on Prime Numbers
 Step 1:
 -------
 
-* prime-gen - creates first 1 million prime numbers by using simple devision.
+* prime-gen - creates the first million prime numbers by using simple division.

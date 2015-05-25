@@ -5,7 +5,7 @@ using namespace std;
 
 typedef uint64_t Number;
 
-vector<Number> primes; //primes without 1 and 2
+vector<Number> primes; //primes without 2
 
 void generate(Number maxCount)
 {
